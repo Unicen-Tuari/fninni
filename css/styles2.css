@@ -1,0 +1,29 @@
+h1 div ul li{
+background-color: green;
+color: red;
+}
+p.especial{
+  color:blue;
+}
+thead {color: green;
+
+}
+tfoot{
+  color:red;
+}
+tbody{
+  color:blue;
+}
+table th, td{
+  border: 1px solid black;
+}
+a{
+  background-color: yellow;
+  color:blue;
+  border: 5px solid green ;
+}
+a:hover{
+  background-color: red;
+  color:green;
+  border: 5px solid yellow ;
+}
