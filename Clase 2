@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!-- Facundo Ninni -->
+<html>
+<head>
+  <title>
+    Titulo
+    </title>
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+<body>
+  <p class="clase">Hola   <a href="http://www.exa.unicen.edu.ar">EXA</a > </p><!-- hiper 1-->
+<p>Hola   <a href="http://www.exa.unicen.edu.ar" target="_blank">Exa(nueva pag)</a > </p>  <!-- hiper 2-->
+<p>Para ir a otra pagina de misma idex <a href="pagina2.html" target="_blank">pagina 2</a > </p><!-- creando una pagina en la carpeta la levanta-->
+    <!-- nombre descriptivos-->
+<a href="#c3"> Aca esta peron ---> </a>
+<p><a href="#c4"> como hacer fernesito </a></p>
+
+<h1>hola mundo!!</h1>
+<h1>.............</h1>
+<h1>.............</h1>
+<h1>.............</h1>
+<h1>.............</h1>
+<h1>.............</h1>
+<h1>.............</h1>
+<h1>.............</h1>
+<h1>.............</h1>
+<h1>.............</h1>
+<h1>.............</h1>
+<h1>.............</h1>
+<h1>.............</h1>
+<h1>.............</h1>
+<h1>.............</h1>
+<h1>.............</h1>
+<p>como </p>
+<!-- &nbsp; &lt; &gt;  &eacute;-->
+<h2>va??</h2>
+<p>va???</p>
+<!-- el id es para saltar a un titulo en la misma pagina por ej de un lado a un sub-indices -->
+
+<div id="c3">
+<img src="http://www.leedor.com/v2/wp-content/uploads/2014/04/Peron.jpg" alt="lago" /></div>
+<a id="c4"></a>
+<ul>
+  <li>una parte de fernet</li>
+  <li>3 hielos</li>
+  <li>coco-cola</li>
+</ul>
+</body>
+  </html>
