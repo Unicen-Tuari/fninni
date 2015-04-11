@@ -1,5 +1,6 @@
-li{
-  color: #109021;
+.vacio li{
+  list-style-type: none;
+  font-size: 25px;
 }
 body {
 }
