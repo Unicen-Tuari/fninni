@@ -1,6 +1,38 @@
 .vacio li{
   list-style-type: none;
-  font-size: 25px;
+  font-size: 20px;
+  margin: auto auto;
+  float: left;
+  padding-left: 25px;
+  padding-right: 10px;
+  margin-top: -12px;
+  color: #72e923;
 }
+
 body {
+  background: linear-gradient(to right, #83cf0b,#4deb50,#a9ef96);
 }
+nav {
+  border: 2px solid #2b9810;
+
+  width: 720px;
+  margin: auto auto;
+  height: 30px;
+  background: linear-gradient(to right, #83cf0b,#4deb50,#a9ef96);
+
+}
+ul a{
+  text-decoration: none;
+
+}
+li a:hover{
+  background-color: #2b9810;
+  color: #72e923;
+}
+ header{
+   width: 720px;
+   margin:auto auto;
+ }
+ header div{
+   margin:auto auto;
+ }
