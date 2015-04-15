@@ -66,7 +66,7 @@ li a:hover{
   border-radius: 30px;
   width: 720px;
   margin: auto auto;
-  height: 900px;
+  height: 920px;
   margin-top: 15px;
 
 }
@@ -91,3 +91,32 @@ li a:hover{
   list-style-type: none;
   margin-top: 90px;
 }
+
+
+/*articulo-html2*/
+.html2{
+border: 2px solid #161819;
+border-radius: 30px;
+width: 720px;
+margin: auto auto;
+height: 920px;
+margin-top: 15px;
+}
+.html2 h1{
+  text-align: center;
+  font-family: Arial, "MS Trebuchet", sans-serif;
+}
+.html2 p{ /* parrafos de las charlas*/
+  float: left;
+  margin-left: 5%;
+  margin-right: 5%;
+  }
+
+.html2 ul li{ /*posiciono las listas charlas y visitas*/
+  margin-top: 10px;
+  font-size: 20px;
+}
+.html2 ul li a{ /*saco lo remarcado del clic previo*/
+  color: #0a0a0a;
+}
+/*articulo-contactos*/
