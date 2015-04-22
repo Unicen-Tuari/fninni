@@ -36,7 +36,7 @@ ul a{
   color: #161819;
   background: #384952;
 }
-.campos_nav li a:hover{
+.campos_nav li a:hover{/*efectos de distorcion y giro*/
   color: #816d55;
   text-shadow: 1px 1px #000000;
   font-style: italic;
@@ -77,7 +77,7 @@ h1, p, h5{
    margin:auto auto;
  }
  audio{
-   width: 44px;
+   width: 46px;
    float: left;
    margin-top: 50px;
    margin-left: 20px;
