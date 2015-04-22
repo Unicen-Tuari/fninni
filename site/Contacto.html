@@ -1,43 +1,46 @@
 <html>
+<!-- ******************************comienzo head**************************************** -->
 <head>
 	<title>Tambo Don Carmelo</title>
 	<link rel="stylesheet" href="css/styles.css">
-	<link rel="shortcut icon" href="images/probando.jpg" type="image/png" />
+	<link rel="shortcut icon" href="images/vaca_icono.jpg" type="image/png" />
 </head>
+<!-- ******************************fin head**************************************** -->
+<!-- ******************************comienzo body**************************************** -->
 <body>
 	<header>
 		<div>
 		<img src="images\imagen_header.jpg" alt="tambo" />
 		</div>
 	</header>
+	<!-- ********************************************************************* -->
 	<nav>
 		<ul class="campos_nav">
 			<li ><a href="index.html">Home</a ></li>
-			<li ><a href="HTML1.html">La Querencia</a ></li>
-			<li ><a href="HTML2.html">Charlas-Visitas</a ></li>
-			<li ><a href="HTML2.html #actualidad">Actualidad</a ></li>
-			<li ><a href="Contacto.html">Contacto</a ></li>
+			<li ><div id="efecto_nav"><a href="HTML1.html">La Querencia</a ></div></li>
+			<li ><div id="efecto_nav"><a href="HTML2.html">Charlas-Visitas</a ></div></li>
+			<li ><div id="efecto_nav"><a href="HTML2.html #actualidad">Actualidad</a ></div></li>
+			<li ><div id="efecto_nav"><a href="Contacto.html">Contacto</a ></div></li>
 		</ul>
-
 	</nav>
-
+	<!-- ********************************************************************* -->
 	<article class="contacto">
 
 			<p>
 			Si usted desea contactarnos para visitarnos o presenciar alguna charla por favor ingrese sus datos y env&iacute;elos.</p>
 			<form>
 				<p>
-				Nombre: <br><input type="text" name="name" placeholder="ej: Juan Domingo" required/> *<br><br>
-				Apellido: <br><input type="text" name="name" placeholder="ej: Peron" required/> *<br><br>
-				E-Mail: <br><input type="text" name="name" placeholder="ej: menem2015@gmail.com" required/> *<br><br>
+				Nombre: <br><input type="text" alt="Nombre" name="name" title="Ingrese su nombre" placeholder="ej: Juan Domingo" required  /> *<br><br>
+				Apellido: <br><input type="text"alt="Apellido" name="name" title="Ingrese su apellido"placeholder="ej: Peron" required/> *<br><br>
+				E-Mail: <br><input type="text"alt="E-Mail" name="name" title="Ingrese su e-mail" placeholder="ej: menem2015@gmail.com" required/> *<br><br>
 				Fecha de nacimiento: <input type="date" name="fecha"/><br><br>
 				Seleccione:<br>
 				Profesor<input type="radio" name="tipo" value="Profesor"/>
 				Alumno<input type="radio" name="tipo" value="Alumno"/>
 				Otro<input type="radio" name="tipo" value="Otro"/><br><br>
-				Introduce tu numero de tel&eacute;fono: <input type="tel" name="telefono" placeholder="(2344)-555555"><br><br>
+				Su n&uacutemero de tel&eacute;fono: <input type="tel" name="telefono" placeholder="(2344)-555555"><br><br>
 				<label for="message">Detalle el motivo de la visita:</label>
-				<textarea id="message" class="input" name="message" rows="10" cols="80"></textarea><br /><br>
+				<textarea id="message" class="input" name="message" rows="10" cols="80" placeholder="ej:...voy a comer cordero.Pablo lleva helado." ></textarea><br /><br>
 				<input id="submit" type="submit" name="submit" value="Enviar" /><br><br>
 				<p id="requerido">(*)Campo requerido, por favor completar.</p>
 				</p>
@@ -45,7 +48,7 @@
 			<p>
 			</p>
 	</article>
-
+	<!-- ******************************comienzo footer**************************************** -->
 	<footer>
 		<ul>
 			<li ><a a href="https://plus.google.com/u/0/109404910695779449858/posts" target="_blank"><img alt="siguenos en facebook" height="20" src="images/footer_google.png" title="siguenos en google" width="20" /></a></li>
@@ -55,5 +58,7 @@
 			<li id="footer_ircielo"><a href="Contacto.html#">Ir al cielo</a ></li>
 		</ul>
 	</footer>
+	<!-- ******************************fin footer**************************************** -->
 </body>
+<!-- ******************************fin body**************************************** -->
 </html>
