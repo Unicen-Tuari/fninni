@@ -1,0 +1,87 @@
+<html>
+	<head>
+		<title>Probando dado a entregar</title>
+	    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	</head>
+	<body>
+		 <div class="container">
+
+		 	<h1>Dados</h1>
+		  <p>
+				<img id="dado1" src="images/dado6.png"/>
+		  </p>
+			<p>
+				<img id="dado2" src="images/dado6.png"/>
+		  </p>
+			<label>Cantidad de Veces:</label><input id="veces" type="text" value="1"/> </br>
+		  <button onclick="lanzarDados()">Tirar Dados</button>
+			<table class="table">
+			<p>sumas</p>
+			<thead>
+        <tr>
+          <th>2</th>
+          <th>3</th>
+          <th>4</th>
+          <th>5</th>
+					<th>6</th>
+					<th>7</th>
+					<th>8</th>
+					<th>9</th>
+					<th>10</th>
+					<th>11</th>
+					<th>12</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+					<td id="2">0</td>
+					<td id="3">0</td>
+					<td id="4">0</td>
+					<td id="5">0</td>
+					<td id="6">0</td>
+					<td id="7">0</td>
+					<td id="8">0</td>
+					<td id="9">0</td>
+					<td id="10">0</td>
+					<td id="11">0</td>
+					<td id="12">0</td>
+        </tr>
+      </tbody>
+    </table>
+		<p>tiradas</p>
+		<p>repetidas</p>
+		<table class="table">
+		<thead>
+			<tr>
+				<th>1</th>
+				<th>2</th>
+				<th>3</th>
+				<th>4</th>
+				<th>5</th>
+				<th>6</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td id="c1">0</td>
+				<td id="c2">0</td>
+				<td id="c3">0</td>
+				<td id="c4">0</td>
+				<td id="c5">0</td>
+				<td id="c6">0</td>
+			</tr>
+		</tbody>
+	</table>
+	<p>repetidas</p>
+		<h1>Lista de Tareas</h1>
+		<ul id="tareas">
+			<li>Debo estudiar para PW1</li>
+			<li>Mirar Boca-River</li>
+		</ul>
+		<label>Tarea:</label><input id="tarea" type="text"/> </br>
+		<button onclick="agregarTarea()">Agregar Tarea</button>
+		</div>
+		<script type="text/javascript" src="js/cubilete.js" async>
+		</script>
+	</body>
+</html>
