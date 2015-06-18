@@ -40,13 +40,5 @@ function lanzarDados()
     tiradas[suma-2]++;
     imprimir(suma);
   }
-  //alert(sumaux);
-}
-
-function agregarTarea(){
-  var lista = document.getElementById('tareas');
-  var nuevaTarea = document.getElementById('tarea').value;
-  var item = document.createElement('li');
-  item.innerHTML = nuevaTarea;
-  lista.appendChild(item);
+  alert(sumaux);
 }
