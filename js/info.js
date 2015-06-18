@@ -4,7 +4,7 @@ $(document).ready(function(){
 		$.ajax({
 			type: "GET",
 			dataType: "html",
-			url: "home.html",
+			url: "home_secundario.html",
 			success: function(data){
 				$("#content").html(data);
 			},
