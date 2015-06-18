@@ -3,7 +3,7 @@ $(document).ready(function(){
 		event.preventDefault();
 		$.ajax({
 			type: "GET",
-			dataType: "html",
+			dataType: 'html',
 			url: "http://thawing-gorge-3659.herokuapp.com/home.html",
 			success: function(data){
 				$("#content").html(data);
@@ -20,7 +20,7 @@ $(document).ready(function(){
 		event.preventDefault();
 		$.ajax({
 			type: "GET",
-			dataType: "html",
+			dataType: 'html',
 			url: "http://thawing-gorge-3659.herokuapp.com/HTML1.html",
 			success: function(data){
 				$("#content").html(data);
