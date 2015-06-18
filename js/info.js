@@ -21,7 +21,7 @@ $(document).ready(function(){
 		$.ajax({
 			type: "GET",
 			dataType: "html",
-			url: "soportetecnico.html",
+			url: "HTML1.html",
 			success: function(data){
 				$("#content").html(data);
 			},
