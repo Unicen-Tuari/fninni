@@ -31,3 +31,37 @@ $(document).ready(function(){
 		})
 	})
 });
+
+$(document).ready(function(){
+	$("#linkCharlas_matu").on("click",function(event){
+		event.preventDefault();
+		$.ajax({
+			type: "GET",
+			dataType: "html",
+			url: "HTML1.html",
+			success: function(data){
+				$("#content").html(data);
+			},
+			error: function(){
+				alert("error");
+			}
+		})
+	})
+});
+
+$(document).ready(function(){
+	$("#linkVisitas").on("click",function(event){
+		event.preventDefault();
+		$.ajax({
+			type: "GET",
+			dataType: "html",
+			url: "HTML1.html",
+			success: function(data){
+				$("#content").html(data);
+			},
+			error: function(){
+				alert("error");
+			}
+		})
+	})
+});
