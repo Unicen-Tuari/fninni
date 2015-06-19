@@ -82,3 +82,37 @@ $(document).ready(function(){
 		})
 	})
 });
+
+$(document).ready(function(){
+	$("#linkVisitas2").on("click",function(event){
+		event.preventDefault();
+		$.ajax({
+			type: "GET",
+			dataType: "html",
+			url: "Visitas.html",
+			success: function(data){
+				$("#content").html(data);
+			},
+			error: function(){
+				alert("error");
+			}
+		})
+	})
+});
+
+$(document).ready(function(){
+	$("#linkVisitas3").on("click",function(event){
+		event.preventDefault();
+		$.ajax({
+			type: "GET",
+			dataType: "html",
+			url: "Visitas.html",
+			success: function(data){
+				$("#content").html(data);
+			},
+			error: function(){
+				alert("error");
+			}
+		})
+	})
+});
