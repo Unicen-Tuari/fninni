@@ -50,6 +50,23 @@ $(document).ready(function(){
 });
 
 $(document).ready(function(){
+	$("#linkCharlas_matu2").on("click",function(event){
+		event.preventDefault();
+		$.ajax({
+			type: "GET",
+			dataType: "html",
+			url: "Charlas_matu.html",
+			success: function(data){
+				$("#content").html(data);
+			},
+			error: function(){
+				alert("error");
+			}
+		})
+	})
+});
+
+$(document).ready(function(){
 	$("#linkVisitas").on("click",function(event){
 		event.preventDefault();
 		$.ajax({
