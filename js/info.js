@@ -38,7 +38,7 @@ $(document).ready(function(){
 		$.ajax({
 			type: "GET",
 			dataType: "html",
-			url: "HTML1.html",
+			url: "Charlas_matu.html",
 			success: function(data){
 				$("#content").html(data);
 			},
@@ -55,7 +55,7 @@ $(document).ready(function(){
 		$.ajax({
 			type: "GET",
 			dataType: "html",
-			url: "HTML1.html",
+			url: "Visitas.html",
 			success: function(data){
 				$("#content").html(data);
 			},
