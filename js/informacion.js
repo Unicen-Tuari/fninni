@@ -133,3 +133,20 @@ $(document).ready(function(){
 		})
 	})
 });
+
+$(document).ready(function(){
+	$("#linkContacto").on("click",function(event){
+		event.preventDefault();
+		$.ajax({
+			type: "GET",
+			dataType: "html",
+			url: "contacto.html",
+			success: function(data){
+				$("#content").html(data);
+			},
+			error: function(){
+				alert("error");
+			}
+		})
+	})
+});

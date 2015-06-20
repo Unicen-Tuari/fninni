@@ -1,3 +1,4 @@
+
 body{background: linear-gradient(to right, #272422,#817355,#272422);}
 h1{
   font-family: sans-serif;
@@ -8,12 +9,7 @@ p{
   font-family: sans-serif;
   color: rgb(0, 0, 0);
 }
-#foto_header{
-  margin-left: -40px;
-}
-#font_home{
-  margin-left: -5px;
-}
+
 
 .badge{
   background: rgb(0, 0, 0);
@@ -29,8 +25,17 @@ audio{
   border-color: rgb(0, 0, 0); }
 
 a:hover{
-    -webkit-transform: rotate(10deg);
-    -moz-transform: rotate(10deg);
-    -ms-transform: rotate(10deg);
-    -o-transform: rotate(10deg);
-     transform: rotate(10deg);
+  -webkit-transform: rotate(10deg);
+  -moz-transform: rotate(10deg);
+  -ms-transform: rotate(10deg);
+  -o-transform: rotate(10deg);
+   transform: rotate(10deg);
+}
+
+#peronista2 img{width: 100%;}
+#peronista1 a:hover{
+-moz-transform: translateY(-10px);
+-ms-transform:translateY(-10px);
+-o-transform: translateY(-10px);
+ transform:translateY(-10px);
+}
