@@ -140,7 +140,7 @@ $(document).ready(function(){
 		$.ajax({
 			type: "GET",
 			dataType: "html",
-			url: "contacto.html",
+			url: "Contacto.html",
 			success: function(data){
 				$("#content").html(data);
 			},
