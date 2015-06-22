@@ -15,7 +15,6 @@ function lanzarUnDado(idDado) {
   else
       {imprimirRepetidas(num);
         return num;}
-
 }
 
 function imprimir(suma){
@@ -33,12 +32,12 @@ function lanzarDados()
   var sumaux=0;
   for (var i = 0; i < document.getElementById('veces').value; i++) {
     var suma = lanzarUnDado("dado1") + lanzarUnDado("dado2");
-    //alert("valor de suma es "+suma);
+    alert("valor de suma es "+suma);}
     if (suma >= sumaux){
       sumaux=suma;
       }
     tiradas[suma-2]++;
     imprimir(suma);
   }
-  alert(sumaux);
+    alert("El valor mas alto es "+ sumaux);
 }

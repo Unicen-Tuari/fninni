@@ -24,7 +24,7 @@ audio{
 .thumbnail{
   background:#816d55;
   border-color: rgb(0, 0, 0); }
-
+  
 a:hover{
   -webkit-transform: rotate(10deg);
   -moz-transform: rotate(10deg);
