@@ -134,22 +134,6 @@ $(document).ready(function(){
 	})
 });
 
-$(document).ready(function(){
-	$("#linkContacto").on("click",function(event){
-		event.preventDefault();
-		$.ajax({
-			type: "GET",
-			dataType: "html",
-			url: "Contacto.html",
-			success: function(data){
-				$("#content").html(data);
-			},
-			error: function(){
-				alert("error");
-			}
-		})
-	})
-});
 function vacaMu(){
     document.getElementById('muu').play();
 			}

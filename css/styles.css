@@ -15,32 +15,42 @@ p,h3{
 .badge{
   background: rgb(0, 0, 0);
 }
-
 audio{
   width: 46px;
   float: left;
+  margin-top: 15px;
+  margin-left: 20px;
 }
 
 .thumbnail{
   background:#816d55;
   border-color: rgb(0, 0, 0); }
-  
-a:hover{
-  -webkit-transform: rotate(10deg);
-  -moz-transform: rotate(10deg);
-  -ms-transform: rotate(10deg);
-  -o-transform: rotate(10deg);
-   transform: rotate(10deg);
-}
 
-#foto_header img{width: 100%;}
-#fx_footer a:hover{
+li a:hover{/*efectos de distorcion y giro*/
+  color: #816d55;
+  text-shadow: 1px 1px #000000;
+  font-style: italic;
+  padding: 5px;
+  background: #161819;
+  color: #816d55;
+  border: 1px solid #161819;
+  font-weight: bold;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 0 40px rgba(255,255,255,.6), inset 0 0 40px rgba(255,255,255,1);
+  -moz-box-shadow: 0 0 40px rgba(255,255,255,.6), inset 0 0 40px rgba(255,255,255,1);
+   box-shadow: 0 0 40px rgba(255,255,255,.6), inset 0 0 40px rgba(255,255,255,1);
+}
+li a{
+  color: #161819;
+}
+.dropdown-menu a:hover{
 -moz-transform: translateY(-10px);
 -ms-transform:translateY(-10px);
 -o-transform: translateY(-10px);
  transform:translateY(-10px);
 }
-.dropdown-menu a:hover{
+#foto_header img{width: 100%;}
+#fx_footer a:hover{
 -moz-transform: translateY(-10px);
 -ms-transform:translateY(-10px);
 -o-transform: translateY(-10px);
@@ -57,4 +67,7 @@ a:hover{
 }
 #ir_cielo{float: right;
 color:#816d55;
+}
+thead th,td {
+    text-align: center;
 }

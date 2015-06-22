@@ -25,12 +25,13 @@
 								</p>
 									<p id="linea"></p>
 							   <h1 id="c5">Visitas programadas</h1>
-									<table><!-- Tabla donde 3x5 donde esta las charlas y visitas programadas -->
+								<div class="table-responsive"	>
+									<table class="table" ><!-- Tabla donde 3x5 donde esta las charlas y visitas programadas -->
 										<thead>
-											<tr>
-											<th>Horarios</th>
-											<th>D&iacuteas</th>
-											<th>Charlas/Visitas</th>
+											<tr class="danger">
+											<th><p>Horarios</p></th>
+											<th><p>D&iacuteas</p></th>
+											<th><p>Charlas/Visitas</p></th>
 											</tr>
 										</thead>
 										<tbody>
@@ -60,7 +61,35 @@
 											<td><p>Alimentos</p></td>
 											</tr>
 										</tbody>
+									  <tfoot>
+											<tr>
+											<td>
+													<form class="form-inline">
+												  <div class="form-group">
+												    <input type="text" class="form-control" id="exampleInputName1" placeholder="Horario">
+												  </div>
+												  </form>
+											</td>
+											<td>
+												<form class="form-inline">
+												<div class="form-group">
+													<input type="text" class="form-control" id="exampleInputName2" placeholder="Dias">
+												</div>
+												</form>
+											</td>
+											<td>
+												<form class="form-inline">
+												<div class="form-group">
+													<input type="text" class="form-control" id="exampleInputName3" placeholder="charla/visita">
+												</div>
+												</form>
+											</td>
+											</tr>
+										</tfoot>
+
 									</table>
+								</div>
+								<button type="submit" class="btn btn-warning">Agregar</button>
 							</div>
 			    </div>
 			  </div>
