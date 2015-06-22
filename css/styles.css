@@ -33,8 +33,8 @@ a:hover{
    transform: rotate(10deg);
 }
 
-#peronista2 img{width: 100%;}
-#peronista1 a:hover{
+#foto_header img{width: 100%;}
+#fx_footer a:hover{
 -moz-transform: translateY(-10px);
 -ms-transform:translateY(-10px);
 -o-transform: translateY(-10px);
@@ -55,4 +55,6 @@ a:hover{
     font-size: 20px !important;
   }
 }
-#facu_peronista{float: right;}
+#ir_cielo{float: right;
+color:#816d55;
+}
