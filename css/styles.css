@@ -46,3 +46,7 @@ a:hover{
 -o-transform: translateY(-10px);
  transform:translateY(-10px);
 }
+.row {
+  margin-right: 0;
+  margin-left: 0;
+}
