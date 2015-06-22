@@ -50,3 +50,9 @@ a:hover{
   margin-right: 0;
   margin-left: 0;
 }
+@media (max-width: 394px) {
+  h1 {
+    font-size: 20px !important;
+  }
+}
+#facu_peronista{float: right;}
