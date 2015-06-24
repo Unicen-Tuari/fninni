@@ -2,12 +2,11 @@
 
 var tiradas = [0,0,0,0,0,0,0,0,0,0,0];
 var repetidas=[0,0,0,0,0,0];
-var timer;
+
 
 function lanzarUnDado(idDado) {
   var dado = document.getElementById(idDado);
   var num = Math.floor(Math.random()*7)+1;
-  //alert("valor  "+num);
   dado.src = "images/dado"+num+".png";
   if (num==7){
     imprimirRepetidas(1);
@@ -32,7 +31,7 @@ function lanzarDados()
   var sumaux=0;
   for (var i = 0; i < document.getElementById('veces').value; i++) {
     var suma = lanzarUnDado("dado1") + lanzarUnDado("dado2");
-    alert("valor de suma es "+suma);}
+    //alert("valor de suma es "+suma);
     if (suma >= sumaux){
       sumaux=suma;
       }

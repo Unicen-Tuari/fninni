@@ -34,53 +34,30 @@
 											<th><p>Charlas/Visitas</p></th>
 											</tr>
 										</thead>
-										<tbody>
-											<tr>
-											<td><p>04:30hs</p></td>
-											<td><p>Lunes, mi&eacutercoles y viernes</p></td>
-											<td><p>Comienzo Matutino</p></td>
-											</tr>
-											<tr>
-											<td><p>08:00hs</p></td>
-											<td><p>Martes y jueves</p></td>
-											<td><p>Inseminaci&oacuten</p></td>
-											</tr>
-											<tr>
-											<td><p>16:30hs</p></td>
-											<td><p>Lunes, mi&eacutecoles y viernes</p></td>
-											<td><p>Comienzo vespertino</p></td>
-											</tr>
-											<tr>
-											<td><p>18:00hs</p></td>
-											<td><p>Todos los d&iacuteas</p></td>
-											<td><p>Tratamiento de la leche</p></td>
-											</tr>
-											<tr>
-											<td><p>19:00hs</p></td>
-											<td><p>Todos los d&iacuteas</p></td>
-											<td><p>Alimentos</p></td>
-											</tr>
-										</tbody>
+										<tbody id="cuerpotabla"><!--Contenido de la tabla-->
+
+    								</tbody>
+
 									  <tfoot>
 											<tr>
 											<td>
 													<form class="form-inline">
 												  <div class="form-group">
-												    <input type="text" class="form-control" id="exampleInputName1" placeholder="Horario">
+												    <input type="text" class="form-control" id="horario" placeholder="Horario">
 												  </div>
 												  </form>
 											</td>
 											<td>
 												<form class="form-inline">
 												<div class="form-group">
-													<input type="text" class="form-control" id="exampleInputName2" placeholder="Dias">
+													<input type="text" class="form-control" id="dias" placeholder="Dias">
 												</div>
 												</form>
 											</td>
 											<td>
 												<form class="form-inline">
 												<div class="form-group">
-													<input type="text" class="form-control" id="exampleInputName3" placeholder="charla/visita">
+													<input type="text" class="form-control" id="charlaVisita" placeholder="charla/visita">
 												</div>
 												</form>
 											</td>
@@ -89,7 +66,8 @@
 
 									</table>
 								</div>
-								<button type="submit" class="btn btn-warning">Agregar</button>
+								<button type="submit" class="btn btn-warning"id="agregar">Agregar</button>
+								<script src="js/informacion.js"></script>
 							</div>
 			    </div>
 			  </div>
