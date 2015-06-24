@@ -120,7 +120,7 @@ $(document).ready(function(){
 					traercharlas(grupo);
 
 					// Llama a la Funcion cargarActividades cuando se Presiona el Boton Correspondiente
-					$('#agregar').on('click', function(event){
+					$('#agregar_visita').on('click', function(event){
 						event.preventDefault();
 						guardarInformacion(grupo);
 					});
