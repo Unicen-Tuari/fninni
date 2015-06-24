@@ -67,7 +67,6 @@ $(document).ready(function(){
 });
 
 	$(document).ready(function(){
-				grupo = 26;
 				function guardarInformacion(grupo){
 				var horario = $("#horario").val();
 			  var dias = $("#dias").val();
@@ -117,6 +116,7 @@ $(document).ready(function(){
 								     }
 								  });
 								}
+					var grupo=26;
 					traercharlas(grupo);
 
 					// Llama a la Funcion cargarActividades cuando se Presiona el Boton Correspondiente
