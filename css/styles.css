@@ -66,3 +66,7 @@ color:#816d55;
 thead th,td {
     text-align: center;
 }
+#linea{
+  background: linear-gradient(to right, #272422,#817355,#272422);
+  padding-top: 1px;
+}

@@ -26,18 +26,12 @@ function imprimirRepetidas(num){
   repetidas[num-1]++;
   repe.innerHTML = repetidas[num-1];
 }
-function  leyenda(){
-  alert("valor");
-  clearInterval(timer);
-}
 
 function lanzarDados()
 {
   var sumaux=0;
   for (var i = 0; i < document.getElementById('veces').value; i++) {
     var suma = lanzarUnDado("dado1") + lanzarUnDado("dado2");
-    timer=setInterval(leyenda, 2000);
-    clearInterval(timer);
     alert("valor de suma es "+suma);
     if (suma >= sumaux){
       sumaux=suma;
@@ -46,14 +40,33 @@ function lanzarDados()
     imprimir(suma);
   }
     alert("El valor mas alto es "+ sumaux);
-    clearInterval(timer);
 }
-function startTimer(){
-  timer=setInterval(lanzarDados, 3000);
+function lanzarMuchos()
+{
+  var sumaux=0;
+  for (var i = 0; i < document.getElementById('muchasveces').value; i++) {
+    var suma = lanzarUnDado("dado1") + lanzarUnDado("dado2");
+    if (suma >= sumaux){
+      sumaux=suma;
+      }
+    tiradas[suma-2]++;
+    imprimir(suma);
+  }
+    alert("El valor mas alto es "+ sumaux);
 }
+
+
+  $('#Masdecien').on('click', function(event){
+  event.preventDefault();
+  lanzarMuchos();
+  })
 
   $('#lanzar').on('click', function(event){
     event.preventDefault();
     lanzarDados();
+  })
+  $('#refresh_page').on('click', function(event){
+    event.preventDefault();
+      location.reload();
   })
 });
