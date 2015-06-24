@@ -1,8 +1,9 @@
 "use strict";
 
+$(document).ready(function(){
 var tiradas = [0,0,0,0,0,0,0,0,0,0,0];
 var repetidas=[0,0,0,0,0,0];
-
+var timer;
 
 function lanzarUnDado(idDado) {
   var dado = document.getElementById(idDado);
@@ -25,13 +26,19 @@ function imprimirRepetidas(num){
   repetidas[num-1]++;
   repe.innerHTML = repetidas[num-1];
 }
+function  leyenda(){
+  alert("valor");
+  clearInterval(timer);
+}
 
 function lanzarDados()
 {
   var sumaux=0;
   for (var i = 0; i < document.getElementById('veces').value; i++) {
     var suma = lanzarUnDado("dado1") + lanzarUnDado("dado2");
-    //alert("valor de suma es "+suma);
+    timer=setInterval(leyenda, 2000);
+    clearInterval(timer);
+    alert("valor de suma es "+suma);
     if (suma >= sumaux){
       sumaux=suma;
       }
@@ -39,4 +46,14 @@ function lanzarDados()
     imprimir(suma);
   }
     alert("El valor mas alto es "+ sumaux);
+    clearInterval(timer);
 }
+function startTimer(){
+  timer=setInterval(lanzarDados, 3000);
+}
+
+  $('#lanzar').on('click', function(event){
+    event.preventDefault();
+    lanzarDados();
+  })
+});

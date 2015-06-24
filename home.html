@@ -44,20 +44,21 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a id="linkHome" href="home.html" class="navbar-brand"  onclick="vacaMu()">HOME</a>
+              <a id="linkHome" href="home.html" class="navbar-brand "><span class="fx_nav">HOME</span></a>
+              <script src="js/informacion.js"></script>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
               <ul class="nav navbar-nav">
-                <li><a id="linkHtml1" href="HTML1.html">La Querencia</a></li>
+                <li><a id="linkQuerencia" href="Querencia.html">La Querencia</a></li>
               </ul>
               <ul class="nav navbar-nav navbar-left">
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Charlas <span class="caret"></span></a>
                   <ul class="dropdown-menu">
-                    <li><a id="linkCharlas_matu" href="">Comienzo Matutino</a></li>
-                    <li><a id="linkCharlas_matu2" href="">Inseminaci&oacuten</a></li>
+                    <li><a class="linkCharlas" href="">Comienzo Matutino</a></li>
+                    <li><a class="linkCharlas" href="">Inseminaci&oacuten</a></li>
                   </ul>
                 </li>
               </ul>
@@ -65,15 +66,17 @@
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Visitas <span class="caret"></span></a>
                   <ul class="dropdown-menu">
-                    <li><a id="linkVisitas" href="">Alimentos</a></li>
-                    <li><a id="linkVisitas2" href="">Tratamientos de la leche</a></li>
+                    <li><a class="linkVisitas" href="">Alimentos</a></li>
+                    <li><a class="linkVisitas" href="">Tratamientos de la leche</a></li>
                     <li class="divider"></li>
-                    <li><a id="linkVisitas3" href="">Visitas programas</a></li>
+                    <li><a class="linkVisitas" href="">Visitas programas</a></li>
                   </ul>
                 </li>
               </ul>
+
               <ul class="nav navbar-nav navbar-right">
                 <li data-toggle="modal" data-target="#myModal"><a href="#">Contacto</a></li>
+                <li><a href="Dados/index.html">...</a></li>
               </ul>
             </div><!-- /.navbar-collapse -->
           </div><!-- /.container-fluid -->
@@ -104,7 +107,7 @@
       </div>
     </article>
 
-        <!-- Modal contactos-->
+    <!-- Modal contactos ------------------------------------------------------------------>
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
       <div class="modal-dialog" role="document">
         <div class="modal-content">

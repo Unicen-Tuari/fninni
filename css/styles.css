@@ -25,7 +25,8 @@ audio{
   background:#816d55;
   border-color: rgb(0, 0, 0); }
 
-li a:hover{/*efectos de distorcion y giro*/
+
+li a:hover{
   color: #816d55;
   text-shadow: 1px 1px #000000;
   font-style: italic;
@@ -35,19 +36,14 @@ li a:hover{/*efectos de distorcion y giro*/
   border: 1px solid #161819;
   font-weight: bold;
   border-radius: 5px;
-  -webkit-box-shadow: 0 0 40px rgba(255,255,255,.6), inset 0 0 40px rgba(255,255,255,1);
-  -moz-box-shadow: 0 0 40px rgba(255,255,255,.6), inset 0 0 40px rgba(255,255,255,1);
-   box-shadow: 0 0 40px rgba(255,255,255,.6), inset 0 0 40px rgba(255,255,255,1);
+  -webkit-box-shadow: 0 0 20px rgba(255,255,255,.6), inset 0 0 20px rgba(255,255,255,1);
+  -moz-box-shadow: 0 0 20px rgba(255,255,255,.6), inset 0 0 20px rgba(255,255,255,1);
+   box-shadow: 0 0 20px rgba(255,255,255,.6), inset 0 0 20px rgba(255,255,255,1);
 }
 li a{
   color: #161819;
 }
-.dropdown-menu a:hover{
--moz-transform: translateY(-10px);
--ms-transform:translateY(-10px);
--o-transform: translateY(-10px);
- transform:translateY(-10px);
-}
+
 #foto_header img{width: 100%;}
 #fx_footer a:hover{
 -moz-transform: translateY(-10px);
