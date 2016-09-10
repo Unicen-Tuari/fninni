@@ -4,6 +4,8 @@ class TamboConfig{
   public static $ACTION_QUERENCIA = 'querencia';
   public static $ACTION_DEFAULT = 'index';
   public static $ACTION_INICIO = 'home';
+  public static $ACTION_CHARLAS = 'Charlas';
+  public static $ACTION_VISITAS = 'Visitas';
 }
 
 ?>

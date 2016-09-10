@@ -22,21 +22,13 @@
         </ul>
         <ul class="nav navbar-nav navbar-left">
           <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Charlas <span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><a class="linkCharlas" href="">Comienzo Matutino</a></li>
-              <li><a class="linkCharlas" href="">Inseminaci&oacuten</a></li>
-            </ul>
+            <a action="index.php?action=Charlas" href="index.php?action=Charlas">Charlas </a>
           </li>
         </ul>
         <ul class="nav navbar-nav navbar-left">
           <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Visitas <span class="caret"></span></a>
+            <a action="index.php?action=Visitas" href="index.php?action=Visitas">Visitas </a>
             <ul class="dropdown-menu">
-              <li><a class="linkVisitas" href="">Alimentos</a></li>
-              <li><a class="linkVisitas" href="">Tratamientos de la leche</a></li>
-              <li class="divider"></li>
-              <li><a class="linkVisitas" href="">Visitas programas</a></li>
             </ul>
           </li>
         </ul>

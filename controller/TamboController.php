@@ -26,7 +26,12 @@ class TamboController
   public function showHome(){
     $this->viewTambo->show('home.tpl');
   }
-
+  public function showCharlas(){
+    $this->viewTambo->show('Charlas.tpl');
+  }
+  public function showVisitas(){
+    $this->viewTambo->show('Visitas.tpl');
+  }
 
 }
   /*public function addTask(){

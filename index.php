@@ -18,6 +18,14 @@ $_REQUEST[TamboConfig::$ACTION] == TamboConfig::$ACTION_DEFAULT){
             $controllerTambo = new TamboController();
             $controllerTambo->showQuerencia();
         break;
+        case TamboConfig::$ACTION_CHARLAS:
+            $controllerTambo = new TamboController();
+            $controllerTambo->showCharlas();
+        break;
+        case TamboConfig::$ACTION_VISITAS:
+            $controllerTambo = new TamboController();
+            $controllerTambo->showVisitas();
+        break;
         }
       }
   /*switch (isset($_GET[TamboConfig::$ACTION]) ? $_GET[TamboConfig::$ACTION] : TamboConfig::$ACTION ) {
