@@ -34,6 +34,7 @@
         </ul>
 
         <ul class="nav navbar-nav navbar-right">
+          <li ><a action="index.php?action=ABM" href="index.php?action=ABM">ABM</a></li>
           <li data-toggle="modal" data-target="#myModal"><a href="#">Contacto</a></li>
         </ul>
       </div><!-- /.navbar-collapse -->
