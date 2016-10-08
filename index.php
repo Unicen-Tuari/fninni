@@ -1,13 +1,23 @@
 <?php
 
   include_once 'config/tamboConfig.php';
+  include_once 'config/tamboAdmin.php';
   include_once 'controller/tamboController.php';
 
-  if (!array_key_exists(TamboConfig::$ACTION,$_REQUEST)||
-$_REQUEST[TamboConfig::$ACTION] == TamboConfig::$ACTION_DEFAULT){
-      // Home del sitio
-      $controllerTambo = new TamboController();
+
+  $controllerTambo = new TamboController();
+  if (!array_key_exists(TamboConfig::$ACTION,$_REQUEST)){
+    if (array_key_exists(TamboAdmin::$ADMIN,$_REQUEST)){
+      switch ($_REQUEST[TamboAdmin::$ADMIN]) {
+        case TamboAdmin::$ADMIN_ADDCAT:
+          $controllerTambo->AgregarCategoria();
+          break;
+      }
+    }else{
+        // Home del sitio
       $controllerTambo->showInicio();
+    }
+
   }else{
     switch($_REQUEST[TamboConfig::$ACTION]){
       case TamboConfig::$ACTION_INICIO:
@@ -32,14 +42,5 @@ $_REQUEST[TamboConfig::$ACTION] == TamboConfig::$ACTION_DEFAULT){
         break;
         }
       }
-  /*switch (isset($_GET[TamboConfig::$ACTION]) ? $_GET[TamboConfig::$ACTION] : TamboConfig::$ACTION ) {
-      case TamboConfig::$ACTION_QUERENCIA:
-          $controllerTambo->ShowQuerencia();
-          break;
-
-      default:
-          $controllerTambo->showHome();
-          break;
-  }*/
 
 ?>

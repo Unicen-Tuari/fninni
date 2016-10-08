@@ -17,6 +17,20 @@
         <div class="page-header">
          <h1>Lista de Charlas</h1>
         </div>
+
+        <div class="col-sm-3">
+          <div  id="categoria">
+            <!-- lista las categorias -->
+          </div>
+          <form id="formcat">
+            <div class="form-group">
+              <label for="task"><h3>Categoria</h3></label>
+              <input type="text" class="form-control" name="categoria" placeholder="Categoria">
+            </div>
+            <button type="submit" id="nuevacat"class="btn btn-primary">Agregar</button>
+          </form>
+        </div>
+
         <div class="col-sm-9">
 
             <div id="charlas">
@@ -33,7 +47,7 @@
                      <textarea class="form-control" maxlength="254" rows="3" id="descripcion" name="descripcion" placeholder="informacion"></textarea>
                    </div>
                    <div class="col-sm-2">
-                     <input type="text" class="form-control" id="nombre" name="nombre" placeholder="P.Designado">
+                     <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Personal Aut">
                    </div>
                    <div class="col-sm-12">
                     <div class="form-group col-sm-2">
@@ -53,22 +67,12 @@
            </form>
 
       </div>
-      <div class="col-sm-3">
-        <div  id="categoria">
-          <!-- lista las categorias -->
-        </div>
-        <form id="formcat">
-          <div class="form-group">
-            <label for="task"><h3>Categoria</h3></label>
-            <input type="text" class="form-control" id="categoriai" name="categoria" placeholder="Categoria">
-          </div>
-          <button type="submit" id="nuevacat"class="btn btn-primary">Agregar</button>
-        </form>
-      </div>
 
       </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/jquery-1.11.3.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/categoria.js"></script>
+    <script src="js/charla.js"></script>
   </body>
 </html>
