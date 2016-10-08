@@ -12,6 +12,10 @@
         case TamboAdmin::$ADMIN_ADDCAT:
           $controllerTambo->AgregarCategoria();
           break;
+        case TamboAdmin::$ADMIN_DROPDOWN||TamboAdmin::$ADMIN_CATEGORIAS:
+          $controllerTambo->MostrarCategorias($_REQUEST[TamboAdmin::$ADMIN]);
+          break;
+
       }
     }else{
         // Home del sitio

@@ -8,9 +8,9 @@ $(document).ready(function () {
       contentType: false,
       processData: false,
       success: function() {
-        $("#categoria").val('');
-        cargarCategoria('categoria');
-        cargarDropdown('dropcat');
+        $("#categoriai").val('');
+        cargarCategoria('categorias');
+        dropdownCategoria('dropdowncat');
       },
       error: function() {
         alert('Nofunca. Capo.');
@@ -19,10 +19,27 @@ $(document).ready(function () {
     });
   });
 
-  function cargarCategoria(id){
-
+  function cargarCategoria(seccion){
+    $.ajax({
+      url:"index.php?admin="+seccion,
+      type: "get",
+      dataType: "HTML",
+      success: function(data){
+          $("#categoria").html(data);
+      },
+    });
   };
-  function cargarDropdown(id){
-
+  function dropdownCategoria(seccion){
+    $.ajax({
+      url:"index.php?admin="+seccion,
+      type: "get",
+      dataType: "HTML",
+      success: function(data){
+          $("#dropcat").html(data);
+      },
+    });
   };
+
+  cargarCategoria('categorias');
+  dropdownCategoria('dropdowncat');
 });

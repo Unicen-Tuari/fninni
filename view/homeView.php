@@ -12,8 +12,13 @@ class TamboView {
   }
 
   function show($a){
-  $this->smarty->display($a);
-}
+    $this->smarty->display($a);
+  }
+  public function showAdmin($elementos,$a)
+  {
+    $this->smarty->assign('elementos',$elementos);
+    $this->show($a);
+  }
 }
 
 

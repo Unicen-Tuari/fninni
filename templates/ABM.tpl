@@ -19,16 +19,16 @@
         </div>
 
         <div class="col-sm-3">
-          <div  id="categoria">
-            <!-- lista las categorias -->
-          </div>
           <form id="formcat">
             <div class="form-group">
               <label for="task"><h3>Categoria</h3></label>
-              <input type="text" class="form-control" name="categoria" placeholder="Categoria">
+              <input type="text" class="form-control" id="categoriai" name="categoria" placeholder="Categoria">
             </div>
             <button type="submit" id="nuevacat"class="btn btn-primary">Agregar</button>
-          </form>
+          </form><br>
+          <div  id="categoria">
+            <!-- lista las categorias -->
+          </div>
         </div>
 
         <div class="col-sm-9">

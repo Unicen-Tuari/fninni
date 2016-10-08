@@ -5,8 +5,7 @@
 class CharlaCategoria
 {
   private $db;
-  private $charla;
-  private $categoria;
+
   function __construct()
   {
     $this->db=New PDO('mysql:host=localhost;dbname=web2;charset=utf8', 'root', '');
@@ -27,5 +26,16 @@ class CharlaCategoria
        }
      }
   }
+public function GetCategorias()
+{
+  $queryselect=$this->db->prepare('SELECT * FROM categoria ORDER BY id_categoria');
+  $queryselect->execute();
+  $categorias=[];
+  $categorias=$queryselect->fetchall(PDO::FETCH_ASSOC);
+  return $categorias;
+}
+
+
+
 }
  ?>

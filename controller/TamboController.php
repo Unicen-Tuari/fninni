@@ -45,6 +45,10 @@ class TamboController
       $this->modelo->AgregarCategoria($_REQUEST['categoria']);
     }
   }
+  public function MostrarCategorias($accion)
+  {
+      $this->viewTambo->showAdmin($this->modelo->GetCategorias(),$accion.'.tpl');
+  }
 }
 
 
