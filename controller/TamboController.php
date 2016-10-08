@@ -33,7 +33,7 @@ class TamboController
     $this->viewTambo->show('Visitas.tpl');
   }
   public function showABM(){
-    $this->viewTambo->show('AMB.tpl');
+    $this->viewTambo->show('ABM.tpl');
   }
 }
   /*public function addTask(){
