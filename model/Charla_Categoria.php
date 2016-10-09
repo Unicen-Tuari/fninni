@@ -34,7 +34,18 @@ public function GetCategorias()
   $categorias=$queryselect->fetchall(PDO::FETCH_ASSOC);
   return $categorias;
 }
+public function EliminarCategoria($categoria)
+{
+  try {
+    $this->db->beginTransaction();
+    $eliminar=$this->db->prepare('DELETE FROM categoria where id_categoria=?');
+    $eliminar->execute([$categoria]);
+    $this->db->commit();
+  } catch (Exception $e) {
+    $this->db->rollBack();
+  }
 
+}
 
 
 }

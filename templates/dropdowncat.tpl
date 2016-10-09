@@ -1,7 +1,7 @@
 {if !empty($elementos)}
   <option value="0">Categorias</option>
   {foreach $elementos as $key=>$categoria}
-    <option value="{$categoria["id_categoria"]}">
+    <option id="dropcategoria{$categoria['id_categoria']}" value="{$categoria['id_categoria']}">
     {$categoria["nombre"]}
     </option>
   {/foreach}

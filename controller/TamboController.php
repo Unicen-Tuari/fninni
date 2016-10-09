@@ -49,6 +49,10 @@ class TamboController
   {
       $this->viewTambo->showAdmin($this->modelo->GetCategorias(),$accion.'.tpl');
   }
+  public function EliminarCategoria()
+  {
+    $this->modelo->EliminarCategoria($_REQUEST['id_categoria']);
+  }
 }
 
 
