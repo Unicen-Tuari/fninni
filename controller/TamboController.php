@@ -64,6 +64,12 @@ class TamboController
       $this->modelo->AgregarCharla($_REQUEST['titulo'],$_REQUEST['descripcion'],$_REQUEST['nombre'],$_REQUEST['dropcat']);
     }
   }
+
+  public function MostrarCharlas($accion)
+  {
+      $this->viewTambo->showAdmin($this->modelo->GetCharlas(),$accion.'.tpl');
+  }
+
 }
 
 

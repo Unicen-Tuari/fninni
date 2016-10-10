@@ -22,8 +22,11 @@
         case TamboAdmin::$ADMIN_UPDATE_CATEGORIA:
           $controllerTambo->ModificarCategoria();
           break;
-        case TamboAdmin::$ADMIN_CHARLA:
+        case TamboAdmin::$ADMIN_ADDCHARLA:
           $controllerTambo->AgregarCharla();
+          break;
+        case TamboAdmin::$ADMIN_CHARLAS:
+          $controllerTambo->MostrarCharlas($_REQUEST[TamboAdmin::$ADMIN]);
           break;
       }
     }else{

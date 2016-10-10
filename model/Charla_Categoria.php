@@ -34,6 +34,17 @@ public function GetCategorias()
   $categorias=$queryselect->fetchall(PDO::FETCH_ASSOC);
   return $categorias;
 }
+
+public function GetNombreCategoria($id)
+{
+  $queryselect=$this->db->prepare('SELECT nombre FROM categoria WHERE id_categoria=?');
+  $queryselect->execute([$id]);
+  $categoria=[];
+  $categoria=$queryselect->fetch(PDO::FETCH_ASSOC);
+  return $categoria["nombre"];
+}
+
+
 public function EliminarCategoria($categoria)
 {
   try {
@@ -72,7 +83,18 @@ public function AgregarCharla($titulo,$descripcion,$nombre,$id_categoria)
   } catch (Exception $e) {
     $this->db->rollBack();
   }
+}
 
+public function GetCharlas()
+{
+  $queryselect=$this->db->prepare('SELECT * FROM charla ORDER BY id_charla');
+  $queryselect->execute();
+  $charlas=[];
+  $charlas=$queryselect->fetchall(PDO::FETCH_ASSOC);
+  foreach ($charlas as &$charla) {
+    $charla["fk_categoria"]=$this->GetNombreCategoria($charla["fk_categoria"]);
+  }
+  return $charlas;
 }
 
 }

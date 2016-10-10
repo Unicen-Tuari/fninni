@@ -14,7 +14,7 @@ class TamboView {
   function show($a){
     $this->smarty->display($a);
   }
-  public function showAdmin($elementos,$a)
+  public function showAdmin($elementos,$a)//uso elementos y abstraigo comportamiento
   {
     $this->smarty->assign('elementos',$elementos);
     $this->show($a);

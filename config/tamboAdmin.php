@@ -6,7 +6,9 @@ class TamboAdmin{
   public static $ADMIN_DROPDOWN = 'dropdowncat';
   public static $ADMIN_ELIMINAR_CATEGORIA = 'eliminar_categoria';
   public static $ADMIN_UPDATE_CATEGORIA = 'modificar_categoria';
-  public static $ADMIN_CHARLA = 'agregar_charla';
+  public static $ADMIN_ADDCHARLA = 'agregar_charla';
+  public static $ADMIN_CHARLAS = 'charlasAdmin';
+
 }
 
 

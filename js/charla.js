@@ -11,6 +11,7 @@ $(document).ready(function () {
         $("#titulo").val('');
         $("#descripcion").val('');
         $("#nombre").val('');
+        cargarCharla('charlasAdmin');
       },
       error: function() {
         alert('Nofunca. Capo.');
@@ -18,5 +19,16 @@ $(document).ready(function () {
 
     });
   });
+  function cargarCharla(seccion){
+    $.ajax({
+      url:"index.php?admin="+seccion,
+      type: "get",
+      dataType: "HTML",
+      success: function(data){
+          $("#charlas").html(data);
+      },
+    });
+  };
 
+  cargarCharla('charlasAdmin');
 });
