@@ -51,7 +51,7 @@ class TamboController
   }
   public function EliminarCategoria()
   {
-    $this->modelo->EliminarCategoria($_REQUEST['id_categoria']);
+    echo $this->modelo->EliminarCategoria($_REQUEST['id_categoria']);
   }
   public function ModificarCategoria()
   {
@@ -64,12 +64,14 @@ class TamboController
       $this->modelo->AgregarCharla($_REQUEST['titulo'],$_REQUEST['descripcion'],$_REQUEST['nombre'],$_REQUEST['dropcat']);
     }
   }
-
   public function MostrarCharlas($accion)
   {
       $this->viewTambo->showAdmin($this->modelo->GetCharlas(),$accion.'.tpl');
   }
-
+  public function EliminarCharla()
+  {
+    echo $this->modelo->EliminarCharla($_REQUEST['id_charla']);
+  }
 }
 
 

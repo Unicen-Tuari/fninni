@@ -1,6 +1,6 @@
 <label class="control-label" for="nombre">charlas</label>
 {foreach $elementos as $charla}
-  <ul class="list-group col-sm-12">
+  <ul class="list-group col-sm-12" id="charla{$charla['id_charla']}">
         <ul class="list-group-item col-sm-1">
           {$charla['id_charla']}
         </ul>
@@ -20,4 +20,4 @@
   </ul>
 {/foreach}
 
-<!-- <script src="js/imagenajax.js"></script> -->
+<script src="js/listacharla.js"></script>

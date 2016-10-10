@@ -28,6 +28,9 @@
         case TamboAdmin::$ADMIN_CHARLAS:
           $controllerTambo->MostrarCharlas($_REQUEST[TamboAdmin::$ADMIN]);
           break;
+        case TamboAdmin::$ADMIN_ELIMINAR_CHARLA:
+          $controllerTambo->EliminarCharla();
+          break;
       }
     }else{
         // Home del sitio

@@ -8,6 +8,7 @@ class TamboAdmin{
   public static $ADMIN_UPDATE_CATEGORIA = 'modificar_categoria';
   public static $ADMIN_ADDCHARLA = 'agregar_charla';
   public static $ADMIN_CHARLAS = 'charlasAdmin';
+  public static $ADMIN_ELIMINAR_CHARLA = 'eliminar_charla';
 
 }
 

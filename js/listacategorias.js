@@ -3,15 +3,21 @@ $(document).ready(function(){//modificacion y eliminacion de la lista
 		$.ajax({
 			type: "DELETE",
 			url: 'index.php?admin=eliminar_categoria&id_categoria=' + id,
-			success: function(){
-				$("#categoria"+id).remove();
-				$("#dropcategoria"+id).remove();
-			},
-			error: function(){
-				alert("error");
-			}
-		})
-	};
+			})
+			.done(function(msg){
+				if(msg=="eliminado"){
+					$("#categoria"+id).remove();
+					$("#dropcategoria"+id).remove();
+				}else {
+					alert(msg);
+				}
+			})
+	    .fail(function(msg){
+				alert(msg);
+				alert("fail");
+			});
+		};
+
 	function ModificarCategoria(nombrecat,id_categoria){
     $.ajax(
       {

@@ -47,14 +47,18 @@ public function GetNombreCategoria($id)
 
 public function EliminarCategoria($categoria)
 {
-  try {
-    $this->db->beginTransaction();
-    $eliminar=$this->db->prepare('DELETE FROM categoria where id_categoria=?');
-    $eliminar->execute([$categoria]);
-    $this->db->commit();
-  } catch (Exception $e) {
-    $this->db->rollBack();
-  }
+    $queryselect=$this->db->prepare('SELECT 1 FROM charla WHERE fk_categoria=?');
+    $queryselect->execute([$categoria]);
+    $exist=$queryselect->fetch();
+
+    if(!$exist){
+      //$this->db->beginTransaction();
+      $eliminar=$this->db->prepare('DELETE FROM categoria where id_categoria=?');
+      $eliminar->execute([$categoria]);
+      return 'eliminado';
+    }else{
+      return 'No se puede eliminar';
+    }
 
 }
 public function ModificarCategoria($nombre,$id_categoria)
@@ -95,6 +99,13 @@ public function GetCharlas()
     $charla["fk_categoria"]=$this->GetNombreCategoria($charla["fk_categoria"]);
   }
   return $charlas;
+}
+
+public function EliminarCharla($charla)
+{
+    $eliminar=$this->db->prepare('DELETE FROM charla where id_charla=?');
+    $eliminar->execute([$charla]);
+    return "elimina";
 }
 
 }
