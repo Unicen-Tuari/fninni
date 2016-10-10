@@ -60,6 +60,20 @@ public function ModificarCategoria($nombre,$id_categoria)
      }
    }
 }
+////charla
+public function AgregarCharla($titulo,$descripcion,$nombre,$id_categoria)
+{
+  try {
+    $this->db->beginTransaction();
+    $queryinsert=$this->db->prepare('INSERT INTO charla(titulo,designado,info,fk_categoria) VALUES(?,?,?,?)');
+    $queryinsert->execute([$titulo,$nombre,$descripcion,$id_categoria]);
+    $this->db->commit();
+
+  } catch (Exception $e) {
+    $this->db->rollBack();
+  }
+
+}
 
 }
  ?>

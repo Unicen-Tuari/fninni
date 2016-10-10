@@ -34,7 +34,7 @@
         <div class="col-sm-9">
 
             <div id="charlas">
-                <!-- lista de productos -->
+                <!-- lista de charlas -->
             </div>
              <form id="formcharla" >
                <div class="form-group">

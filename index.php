@@ -22,7 +22,9 @@
         case TamboAdmin::$ADMIN_UPDATE_CATEGORIA:
           $controllerTambo->ModificarCategoria();
           break;
-
+        case TamboAdmin::$ADMIN_CHARLA:
+          $controllerTambo->AgregarCharla();
+          break;
       }
     }else{
         // Home del sitio

@@ -57,6 +57,13 @@ class TamboController
   {
     $this->modelo->ModificarCategoria($_REQUEST['nombre'],$_REQUEST['id_categoria']);
   }
+  //charla
+  public function AgregarCharla()
+  {
+    if (isset($_REQUEST['titulo'],$_REQUEST['descripcion'],$_REQUEST['nombre'],$_REQUEST['dropcat'])){
+      $this->modelo->AgregarCharla($_REQUEST['titulo'],$_REQUEST['descripcion'],$_REQUEST['nombre'],$_REQUEST['dropcat']);
+    }
+  }
 }
 
 
