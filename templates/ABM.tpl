@@ -67,7 +67,23 @@
            </form>
 
       </div>
-
+      <!-- MODAL CATEGORIA -->
+     <div class="modal fade" id="myModalC" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">Modifique el nombre de la categoria:</h4>
+          </div>
+          <input id="updatecat" name="name" value="">
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Salir</button>
+            <button type="button" class="btn btn-primary" id="nuevoNombreCat" idcat="numero" name="nuevoNombreCat" data-dismiss="modal">Guardar cambio</button>
+          </div>
+        </div>
+      </div>
+     </div>
+         <!--  -->
       </div>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/jquery-1.11.3.js"></script>

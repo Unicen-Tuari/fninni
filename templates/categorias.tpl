@@ -6,9 +6,11 @@
     </ul>
 
     <ul class="list-group-item col-sm-8 col-sm-offset-1">
+      <span id="nombre{$categoria['id_categoria']}">
       {$categoria["nombre"]}
+      </span>
       <a class="glyphicon glyphicon-trash eliminar" href="{$categoria['id_categoria']}"></a>
-      <a class="glyphicon glyphicon-edit modificar" href="{$categoria['id_categoria']}"></a>
+      <a class="glyphicon glyphicon-edit modificar" data-toggle="modal" data-target="#myModalC" idcatm="{$categoria['nombre']}-{$categoria['id_categoria']}"></a>
     </ul>
   </ul>
 {/foreach}

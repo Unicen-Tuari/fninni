@@ -46,7 +46,20 @@ public function EliminarCategoria($categoria)
   }
 
 }
-
+public function ModificarCategoria($nombre,$id_categoria)
+{
+   if (strlen($nombre) >3)
+   {
+     try{
+       $this->db->beginTransaction();
+       $queryupdate=$this->db->prepare('UPDATE categoria SET nombre=? where id_categoria=?');
+       $queryupdate->execute([$nombre,$id_categoria]);
+       $this->db->commit();
+     }catch(Exception $e){
+       $this->db->rollBack();
+     }
+   }
+}
 
 }
  ?>

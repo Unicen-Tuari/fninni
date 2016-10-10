@@ -19,6 +19,9 @@
         case TamboAdmin::$ADMIN_ELIMINAR_CATEGORIA:
           $controllerTambo->EliminarCategoria();
           break;
+        case TamboAdmin::$ADMIN_UPDATE_CATEGORIA:
+          $controllerTambo->ModificarCategoria();
+          break;
 
       }
     }else{

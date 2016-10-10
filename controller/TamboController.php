@@ -53,6 +53,10 @@ class TamboController
   {
     $this->modelo->EliminarCategoria($_REQUEST['id_categoria']);
   }
+  public function ModificarCategoria()
+  {
+    $this->modelo->ModificarCategoria($_REQUEST['nombre'],$_REQUEST['id_categoria']);
+  }
 }
 
 
