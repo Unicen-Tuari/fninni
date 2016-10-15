@@ -96,7 +96,7 @@ public function GetCharlas()
   $charlas=[];
   $charlas=$queryselect->fetchall(PDO::FETCH_ASSOC);
   foreach ($charlas as &$charla) {
-    $charla["fk_categoria"]=$this->GetNombreCategoria($charla["fk_categoria"]);
+    $charla["nombre_categoria"]=$this->GetNombreCategoria($charla["fk_categoria"]);
   }
   return $charlas;
 }
@@ -106,6 +106,20 @@ public function EliminarCharla($charla)
     $eliminar=$this->db->prepare('DELETE FROM charla where id_charla=?');
     $eliminar->execute([$charla]);
     return "elimina";
+}
+
+public function ModificarCharla($id_charla,$titulo,$designado,$info,$id_cat){
+  try {
+    $this->db->beginTransaction();
+    $queryupdate=$this->db->prepare('UPDATE  charla  SET titulo=?, designado=?, info=?, fk_categoria=? WHERE id_charla=?');
+    $queryupdate->execute([$titulo,$designado,$info,$id_cat,$id_charla]);
+    $this->db->commit();
+    return "guardo";
+  } catch (Exception $e) {
+    $this->db->rollBack();
+    return "roll";
+  }
+
 }
 
 }

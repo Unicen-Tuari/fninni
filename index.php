@@ -31,6 +31,10 @@
         case TamboAdmin::$ADMIN_ELIMINAR_CHARLA:
           $controllerTambo->EliminarCharla();
           break;
+        case TamboAdmin::$ADMIN_UPDATE_CHARLA:
+          $controllerTambo->ModificarCharla();
+          break;
+
       }
     }else{
         // Home del sitio

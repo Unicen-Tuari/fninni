@@ -18,7 +18,7 @@ $(document).ready(function () {
 
     });
   });
-  
+
   function cargarCategoria(seccion){
     $.ajax({
       url:"index.php?admin="+seccion,
@@ -36,6 +36,7 @@ $(document).ready(function () {
       dataType: "HTML",
       success: function(data){
           $("#dropcat").html(data);
+          $("#dropcatm").html(data);
       },
     });
   };

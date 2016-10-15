@@ -84,6 +84,38 @@
       </div>
      </div>
          <!--  -->
+ <!-- MODAL CHARLA -->
+     <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content  col-sm-12">
+           <div class="modal-header col-sm-12">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">Modifique La charla:</h4>
+           </div>
+           <div class="modal-body col-sm-12">
+             <div class="form-group col-sm-3">
+               <select id="dropcatm" name="dropcatm">
+                 <option value="0">Categorias</option>
+                 <!-- categorias -->
+               </select>
+             </div>
+             <div class="col-sm-3  col-sm-offset-1">
+              <input type="text" class="form-control" id="updatetitulo" name="titulo" placeholder="titulo">
+             </div>
+             <div class="col-sm-12">
+              <textarea class="form-control" maxlength="254" rows="3" id="updatedescripcion" name="descripcion" placeholder="descripcion"></textarea>
+             </div>
+             <div class="col-sm-3 col-sm-offset-1">
+              <input type="text" class="form-control" id="updatedesignado" name="designado" placeholder="Personal Aut.">
+             </div>
+           </div>
+           <div class="modal-footer col-sm-12">
+             <button type="button" class="btn btn-default" data-dismiss="modal">Salir</button>
+             <button type="button" class="btn btn-primary" id="Charlamodificada" idchar="" name="Charlamodificada" data-dismiss="modal">Guardar cambios</button>
+           </div>
+        </div>
+      </div>
+     </div>
       </div>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/jquery-1.11.3.js"></script>

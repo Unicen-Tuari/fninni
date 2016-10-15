@@ -72,6 +72,13 @@ class TamboController
   {
     echo $this->modelo->EliminarCharla($_REQUEST['id_charla']);
   }
+
+  public function ModificarCharla()
+  {
+    echo $this->modelo->ModificarCharla($_REQUEST['id_charla'],$_REQUEST['titulo'],$_REQUEST['designado'],$_REQUEST['info'],$_REQUEST['id_cat']);
+  }
+
+
 }
 
 
