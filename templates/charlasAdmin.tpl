@@ -20,7 +20,9 @@
     <a class="glyphicon glyphicon-trash eliminar" href="{$charla['id_charla']}"></a>
     <a class="glyphicon glyphicon-edit modificar" data-toggle="modal" data-target="#myModal2"
     idchar="{$charla['id_charla']}-{$charla['fk_categoria']}-{$charla['titulo']}-{$charla['info']}-{$charla['designado']}"></a>
+    <a class="glyphicon glyphicon-picture botonAgregarImagenes" href="{$charla['id_charla']}"></a>
   </ul>
 {/foreach}
 
 <script src="js/listacharla.js"></script>
+<script src="js/imagen.js"></script>

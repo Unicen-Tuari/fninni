@@ -58,8 +58,7 @@
 
                     <span class="file-input btn btn-primary btn-file">
                       Cargar&hellip; <input class="cargar form-group col-sm-1 col-sm-offset-3" type="file"  id="imagesToUpload" name="imagesToUpload[]" multiple/>
-                    </span>
-
+                        </span>
                      <button type="submit" id="nuevacharla" class="btn btn-primary col-sm-2 col-sm-offset-1">Agregar</button>
                    </div>
                  </div>
@@ -121,6 +120,7 @@
     <script src="js/jquery-1.11.3.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/categoria.js"></script>
+    <script src="js/imagen.js"></script>
     <script src="js/charla.js"></script>
   </body>
 </html>

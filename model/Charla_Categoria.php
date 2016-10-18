@@ -76,12 +76,14 @@ public function ModificarCategoria($nombre,$id_categoria)
    }
 }
 ////charla
-public function AgregarCharla($titulo,$descripcion,$nombre,$id_categoria)
+public function AgregarCharla($titulo,$descripcion,$nombre,$id_categoria,$images)
 {
   try {
     $this->db->beginTransaction();
     $queryinsert=$this->db->prepare('INSERT INTO charla(titulo,designado,info,fk_categoria) VALUES(?,?,?,?)');
     $queryinsert->execute([$titulo,$nombre,$descripcion,$id_categoria]);
+    $id_charla = $this->db->lastInsertId();
+    $this->AgregarImagenes($id_charla,$images);
     $this->db->commit();
 
   } catch (Exception $e) {
@@ -114,13 +116,31 @@ public function ModificarCharla($id_charla,$titulo,$designado,$info,$id_cat){
     $queryupdate=$this->db->prepare('UPDATE  charla  SET titulo=?, designado=?, info=?, fk_categoria=? WHERE id_charla=?');
     $queryupdate->execute([$titulo,$designado,$info,$id_cat,$id_charla]);
     $this->db->commit();
-    return "guardo";
+    return "guardo";// para postman
   } catch (Exception $e) {
     $this->db->rollBack();
     return "roll";
   }
-
 }
+/////////Imagenes
+private function subirImagenes($imagenes){
+    $carpeta = "uploads/imagenes/";
+    $destinos_finales = array();
+    foreach ($imagenes["tmp_name"] as $key => $value) {
+      $destinos_finales[] = $carpeta.uniqid().$imagenes["name"][$key];
+      move_uploaded_file($value, end($destinos_finales));
+    }
 
+    return $destinos_finales;
+  }
+function AgregarImagenes($id_charla, $imagenes){
+  if($imagenes){
+    $rutas=$this->subirImagenes($imagenes);
+    $consulta = $this->db->prepare('INSERT INTO imagen(fk_charla,path) VALUES(?,?)');
+    foreach($rutas as $ruta){
+      $consulta->execute(array($id_charla,$ruta));
+    }
+  }
+}
 }
  ?>

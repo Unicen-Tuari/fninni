@@ -34,6 +34,10 @@
         case TamboAdmin::$ADMIN_UPDATE_CHARLA:
           $controllerTambo->ModificarCharla();
           break;
+          case TamboAdmin::$ADMIN_ADD_IMG:
+            $controllerTambo->AgregarImagenes();
+            break;
+
 
       }
     }else{

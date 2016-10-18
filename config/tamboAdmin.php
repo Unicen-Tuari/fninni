@@ -10,6 +10,7 @@ class TamboAdmin{
   public static $ADMIN_CHARLAS = 'charlasAdmin';
   public static $ADMIN_ELIMINAR_CHARLA = 'eliminar_charla';
   public static $ADMIN_UPDATE_CHARLA = 'modificar_charla';
+  public static $ADMIN_ADD_IMG = 'agregar_imagenes';
 
 }
 

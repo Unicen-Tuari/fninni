@@ -61,7 +61,7 @@ class TamboController
   public function AgregarCharla()
   {
     if (isset($_REQUEST['titulo'],$_REQUEST['descripcion'],$_REQUEST['nombre'],$_REQUEST['dropcat'])){
-      $this->modelo->AgregarCharla($_REQUEST['titulo'],$_REQUEST['descripcion'],$_REQUEST['nombre'],$_REQUEST['dropcat']);
+      $this->modelo->AgregarCharla($_REQUEST['titulo'],$_REQUEST['descripcion'],$_REQUEST['nombre'],$_REQUEST['dropcat'],$_FILES["imagesToUpload"]);
     }
   }
   public function MostrarCharlas($accion)
@@ -77,7 +77,13 @@ class TamboController
   {
     echo $this->modelo->ModificarCharla($_REQUEST['id_charla'],$_REQUEST['titulo'],$_REQUEST['designado'],$_REQUEST['info'],$_REQUEST['id_cat']);
   }
-
+  public function AgregarImagenes(){
+    if(isset($_REQUEST['id_char']) && isset($_FILES["imagesToUpload2"])){
+      $this->modelo->AgregarImagenes($_REQUEST['id_char'],$_FILES["imagesToUpload2"]);
+    }else{
+      echo '{ "result" :  "Faltan paramentros" }';
+    }
+  }
 
 }
 
