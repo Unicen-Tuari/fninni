@@ -28,13 +28,19 @@
         case TamboAdmin::$ADMIN_CHARLAS:
           $controllerTambo->MostrarCharlas($_REQUEST[TamboAdmin::$ADMIN]);
           break;
+        case TamboAdmin::$ADMIN_CHARLA:
+          $controllerTambo->MostrarCharla($_REQUEST[TamboAdmin::$ADMIN],$_REQUEST[TamboAdmin::$IDCHARLA]);
+          break;
         case TamboAdmin::$ADMIN_ELIMINAR_CHARLA:
           $controllerTambo->EliminarCharla();
+          break;
+        case TamboAdmin::$ADMIN_ELIMINAR_IMG:
+          $controllerTambo->eliminarImagen();
           break;
         case TamboAdmin::$ADMIN_UPDATE_CHARLA:
           $controllerTambo->ModificarCharla();
           break;
-          case TamboAdmin::$ADMIN_ADD_IMG:
+        case TamboAdmin::$ADMIN_ADD_IMG:
             $controllerTambo->AgregarImagenes();
             break;
 
@@ -51,6 +57,10 @@
           $controllerTambo = new TamboController();
           $controllerTambo->showHome();
         break;
+        case TamboConfig::$ACTION_HOME:
+            $controllerTambo = new TamboController();
+            $controllerTambo->show(TamboConfig::$ACTION_HOME);
+          break;
         case TamboConfig::$ACTION_QUERENCIA:
             $controllerTambo = new TamboController();
             $controllerTambo->showQuerencia();
@@ -58,6 +68,10 @@
         case TamboConfig::$ACTION_CHARLAS:
             $controllerTambo = new TamboController();
             $controllerTambo->showCharlas();
+        break;
+        case TamboConfig::$ACTION_CHARLA:
+            $controllerTambo = new TamboController();
+            $controllerTambo->showCharla($_REQUEST[TamboAdmin::$IDCHARLA]);
         break;
         case TamboConfig::$ACTION_VISITAS:
             $controllerTambo = new TamboController();

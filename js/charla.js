@@ -11,7 +11,7 @@ $(document).ready(function () {
         $("#titulo").val('');
         $("#descripcion").val('');
         $("#nombre").val('');
-        cargarCharla('charlasAdmin');
+        cargarCharlas('charlasAdmin');
       },
       error: function() {
         alert('Nofunca. Capo.');
@@ -19,7 +19,7 @@ $(document).ready(function () {
 
     });
   });
-  function cargarCharla(seccion){
+  function cargarCharlas(seccion){
     $.ajax({
       url:"index.php?admin="+seccion,
       type: "get",
@@ -30,5 +30,44 @@ $(document).ready(function () {
     });
   };
 
-  cargarCharla('charlasAdmin');
+	 function cargarCharla(idcharla){
+	  $.ajax({
+	 	 type: "GET",
+	 	 dataType: "html",
+	 	 url: 'index.php?admin=charla&id_charla='+ idcharla,
+	 	 success: function(data){
+	 		 $("#charlas").html(data);
+	 		 $("#cuerpo").html(data);
+
+	 	 },
+	 	 error: function(){
+	 		 alert("error");
+	 	 }
+	  })
+	 };
+
+	 $('#charlas').on('click',"a.ver",function(){
+	  var idcharla=this.getAttribute('idcharlav');
+	 	cargarCharla(idcharla);
+	 });
+
+   function borrarimagen(idimg){
+     $.ajax(
+       {
+         method: "DELETE",
+         url: 'index.php?admin=eliminar_img&id_imagen='+ idimg
+       })
+     .done(function() {
+        $('#img'+idimg).remove();
+     })
+     .fail(function(data) {
+       alert('Imposible borrar la imagen');
+     });
+   }
+
+   $('#charlas').on('click', 'a.eliminarimg', function() {
+     var idimg = this.getAttribute('idimg');
+     borrarimagen(idimg);
+   });
+  cargarCharlas('charlasAdmin');
 });

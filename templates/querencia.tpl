@@ -1,5 +1,4 @@
-{include file="header.tpl"}
-{include file="nav.tpl"}
+
 <!-- ********************************************************************* -->
       <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2">
         <div class="thumbnail">
@@ -62,6 +61,3 @@
     </div>
     <script src="js/informacion.js"></script>
 <!-- ******************************comienzo footer**************************************** -->
-
-{include file="modal.tpl"}
-{include file="footer.tpl"}

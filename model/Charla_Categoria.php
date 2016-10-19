@@ -26,6 +26,7 @@ class CharlaCategoria
        }
      }
   }
+
 public function GetCategorias()
 {
   $queryselect=$this->db->prepare('SELECT * FROM categoria ORDER BY id_categoria');
@@ -59,8 +60,14 @@ public function EliminarCategoria($categoria)
     }else{
       return 'No se puede eliminar';
     }
-
 }
+
+public function EliminarImagen($img){
+  $eliminar=$this->db->prepare('DELETE FROM imagen where id_imagen=?');
+  $eliminar->execute([$img]);
+  return 'eliminado';
+}
+
 public function ModificarCategoria($nombre,$id_categoria)
 {
    if (strlen($nombre) >3)
@@ -83,7 +90,9 @@ public function AgregarCharla($titulo,$descripcion,$nombre,$id_categoria,$images
     $queryinsert=$this->db->prepare('INSERT INTO charla(titulo,designado,info,fk_categoria) VALUES(?,?,?,?)');
     $queryinsert->execute([$titulo,$nombre,$descripcion,$id_categoria]);
     $id_charla = $this->db->lastInsertId();
-    $this->AgregarImagenes($id_charla,$images);
+    if($images["name"][0]){
+      $this->AgregarImagenes($id_charla,$images);
+    }
     $this->db->commit();
 
   } catch (Exception $e) {
@@ -103,11 +112,35 @@ public function GetCharlas()
   return $charlas;
 }
 
+public function GetCharla($idcharla){
+    $queryselect=$this->db->prepare('SELECT * FROM charla WHERE id_charla=?');
+    $queryselect->execute([$idcharla]);
+    $charla=$queryselect->fetch(PDO::FETCH_ASSOC);
+
+    $charla["nombre_categoria"]=$this->GetNombreCategoria($charla["fk_categoria"]);
+
+    $consultaImagen= $this->db->prepare("SELECT * FROM imagen where fk_charla=?");
+    $consultaImagen->execute([$charla['id_charla']]);
+    $charla['imagenes']=null;
+    while($imagen = $consultaImagen->fetch(PDO::FETCH_ASSOC)) {
+				$charla['imagenes'][] = $imagen;
+			}
+    return $charla;
+}
+
 public function EliminarCharla($charla)
 {
-    $eliminar=$this->db->prepare('DELETE FROM charla where id_charla=?');
-    $eliminar->execute([$charla]);
-    return "elimina";
+    $queryselect=$this->db->prepare('SELECT 1 FROM imagen WHERE fk_charla=?');
+    $queryselect->execute([$charla]);
+    $exist=$queryselect->fetch();
+
+    if(!$exist){
+      $eliminar=$this->db->prepare('DELETE FROM charla where id_charla=?');
+      $eliminar->execute([$charla]);
+      return 'eliminado';
+    }else{
+      return 'No se puede eliminar';
+    }
 }
 
 public function ModificarCharla($id_charla,$titulo,$designado,$info,$id_cat){

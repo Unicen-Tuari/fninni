@@ -22,6 +22,10 @@ class TamboController
     $this->viewTambo->show('home.tpl');
   }
 
+  public function show($action){
+    $this->viewTambo->show($action.'.tpl');
+  }
+
   public function showQuerencia(){
     $this->viewTambo->show('querencia.tpl');
   }
@@ -30,7 +34,10 @@ class TamboController
     $this->viewTambo->show('home.tpl');
   }
   public function showCharlas(){
-    $this->viewTambo->show('Charlas.tpl');
+    $this->viewTambo->showAdmin($this->modelo->GetCharlas(),'Charlas.tpl');
+  }
+  public function showCharla($idcharla){
+    $this->viewTambo->showAdmin($this->modelo->GetCharla($idcharla),'Charlanav.tpl');
   }
   public function showVisitas(){
     $this->viewTambo->show('Visitas.tpl');
@@ -53,6 +60,10 @@ class TamboController
   {
     echo $this->modelo->EliminarCategoria($_REQUEST['id_categoria']);
   }
+  public function eliminarImagen()
+  {
+    echo $this->modelo->EliminarImagen($_REQUEST['id_imagen']);
+  }
   public function ModificarCategoria()
   {
     $this->modelo->ModificarCategoria($_REQUEST['nombre'],$_REQUEST['id_categoria']);
@@ -67,6 +78,9 @@ class TamboController
   public function MostrarCharlas($accion)
   {
       $this->viewTambo->showAdmin($this->modelo->GetCharlas(),$accion.'.tpl');
+  }
+  public function MostrarCharla($accion,$idcharla){
+      $this->viewTambo->showAdmin($this->modelo->GetCharla($idcharla),$accion.'.tpl');
   }
   public function EliminarCharla()
   {
