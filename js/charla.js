@@ -47,7 +47,7 @@ $(document).ready(function () {
 	 };
 
 	 $('#charlas').on('click',"a.ver",function(){
-	  var idcharla=this.getAttribute('idcharlav');
+	  var idcharla=this.getAttribute('idcharlav');//pido los valores de la charla cargo mi unica charla
 	 	cargarCharla(idcharla);
 	 });
 

@@ -43,8 +43,6 @@
         case TamboAdmin::$ADMIN_ADD_IMG:
             $controllerTambo->AgregarImagenes();
             break;
-
-
       }
     }else{
         // Home del sitio

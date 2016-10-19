@@ -1,5 +1,4 @@
 
-
 body{background: linear-gradient(to right, #FFF,#817355,#FFF);}
 h1{
   font-family: sans-serif;
@@ -26,6 +25,7 @@ audio{
   background:#816d55;
   border-color: rgb(0, 0, 0); }
 
+tbody th p{text-align: center;}
 
 li a:hover{
   color: #816d55;

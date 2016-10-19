@@ -1,7 +1,7 @@
 <?php
 class TamboAdmin{
   public static $ADMIN = 'admin';
-    public static $IDCHARLA = 'id_charla';
+  public static $IDCHARLA = 'id_charla';
   public static $ADMIN_ADDCAT = 'agregar_categoria';
   public static $ADMIN_CATEGORIAS = 'categorias';
   public static $ADMIN_DROPDOWN = 'dropdowncat';
