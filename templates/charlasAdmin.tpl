@@ -4,7 +4,7 @@
         <ul class="list-group-item col-sm-1">{$charla['id_charla']}</ul>
         <ul class="list-group-item col-sm-2" idcha="{$charla['fk_categoria']}" id="categoria{$charla['id_charla']}">{$charla['nombre_categoria']}</ul>    <!-- Aqui agrego nuevo atributo para mostrar la categoria -->
         <ul class="list-group-item col-sm-2"id="titulo{$charla['id_charla']}">{$charla['titulo']}</ul>
-        <ul class="list-group-item col-sm-4" id="descripcion{$charla['id_charla']}">{$charla['info']}</ul>
+        <ul class="list-group-item scrollY col-sm-4" id="descripcion{$charla['id_charla']}">{$charla['info']}</ul>
         <ul class="list-group-item col-sm-2" id="designado{$charla['id_charla']}">{$charla['designado']}</ul>
     <a class="glyphicon glyphicon-trash eliminar" href="{$charla['id_charla']}"></a>
     <a class="glyphicon glyphicon-edit modificar" data-toggle="modal" data-target="#myModal2"

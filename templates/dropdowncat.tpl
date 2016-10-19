@@ -8,3 +8,4 @@
 {else}
   <option value="0">No Existen Categorias</option>
 {/if}
+<!-- solo por smarty pasan los datos de la db,por eso lo tengo en un tpl -->

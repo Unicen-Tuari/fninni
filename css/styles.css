@@ -67,6 +67,12 @@ color:#816d55;
 thead th,td {
     text-align: center;
 }
+
+.pppp {
+  max-height: 42px;
+  overflow-y: auto;
+}
+
 #linea{
   background: linear-gradient(to right, #272422,#817355,#272422);
   padding-top: 1px;

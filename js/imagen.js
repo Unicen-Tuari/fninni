@@ -25,7 +25,7 @@ $(document).ready(function(){
 
 		})
 		.fail(function() {
-			$('#productos').append('<li>Imposible agregar IMG</li>');
+			$('#').append('<li>Imposible agregar IMG</li>');
 		});
   });
 

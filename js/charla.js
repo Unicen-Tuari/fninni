@@ -37,7 +37,6 @@ $(document).ready(function () {
 	 	 url: 'index.php?admin=charla&id_charla='+ idcharla,
 	 	 success: function(data){
 	 		 $("#charlas").html(data);
-	 		 $("#cuerpo").html(data);
 
 	 	 },
 	 	 error: function(){
@@ -51,7 +50,7 @@ $(document).ready(function () {
 	 	cargarCharla(idcharla);
 	 });
 
-   function borrarimagen(idimg){
+   function borrarimagen(idimg){//aca boor la imagen de charla tpl de mi abm
      $.ajax(
        {
          method: "DELETE",
